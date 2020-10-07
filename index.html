@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timed Quiz</title>
+    <link rel="stylesheet" type ="text/css" href="assets/css/style.css">
+    <title>Code Quiz</title>
     
 </head>
+<header>
+    <h1> Code Quiz</h1>
+</header>
+
 <body>
     
+    <div class="container">
+
+<div class="time"></div>
+        <div id="startBtn"><button class="btn">START Quiz</button></div>
+        <div id="question-container" class="hide">
+            <div id="question">
+                <h2>question</h2>
+            </div>
+            <div id="answer-buttons" >
+                <button class="btn">AnswerA</button>
+                <button class="btn">AnswerB</button>
+                <button class="btn">AnswerC</button>
+                <div class="controls">
+                    <button id="next-btn" class="next-btn">next</button>
+
+
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- <div id="start-btn" >
+        <h1>START Quiz</h1>
+        <div class="timer">TIMER HERE</div> 
+    </div>
+   <div id="question">
+    <p>What does HTML stand for?</p>
+   </div>
+   <div id="choices">
+    <div class="choice" id="A"></div>
+    <div class="choice" id="B"></div>
+    <div class="choice" id="C"></div>
+   </div>
+   <div id="progress">will tell user right or wrong</div>
+   
+<div id="scoreContainer"></div> -->
+
+    
+<script src="assets/js/logic.js"></script>
+
 </body>
 </html>

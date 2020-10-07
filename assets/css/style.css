@@ -1,0 +1,36 @@
+.btn {
+    font-style: bold;
+    background-color: fuchsia;
+    width: 65px auto;
+
+}
+
+#startBtn {
+    font-style: bold;
+    ;
+
+}
+
+body {
+    background-color:beige;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: blueviolet;
+    padding: 50px;
+    margin: 50px;
+    
+}
+h2 {
+    font-weight: bold;
+    font-size: 38px;
+    text-align: left;
+
+}
+
+#next-btn {
+    background-color: fuchsia;
+    width: 65px auto;
+}
