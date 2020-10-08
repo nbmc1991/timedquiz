@@ -1,3 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    border: burlywood;
+    padding: 50%;
+    background-color: chartreuse;
+
+}
+
 .btn {
     font-style: bold;
     background-color: fuchsia;
@@ -5,8 +19,11 @@
 
 }
 
-#startBtn {
+#start-btn button {
     font-style: bold;
+    background-color: aqua;
+    position: relative
+    
     ;
 
 }
@@ -30,7 +47,13 @@ h2 {
 
 }
 
-#next-btn {
-    background-color: fuchsia;
+.next-btn button {
+    background-color: rgb(255, 81, 0);
     width: 65px auto;
+
+}
+.submit-btn button {
+    background-color: blueviolet;
+    width: 65px auto;
+
 }

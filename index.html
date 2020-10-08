@@ -16,26 +16,34 @@
     <div class="container">
 
 <div class="time"></div>
-        <div id="startBtn"><button class="btn">START Quiz</button></div>
-        <div id="question-container" class="hide">
+<!-- //start button -->
+        <div id="start-btn"><button>Start Quiz</button> </div>
+        <div id="question-container" >
             <div id="question">
-                <h2>question</h2>
+                <h2>Question:</h2>
             </div>
             <div id="answer-buttons" >
-                <button class="btn">AnswerA</button>
-                <button class="btn">AnswerB</button>
-                <button class="btn">AnswerC</button>
+                <div class="choice" id="A" onclick="checkAnswer('A')"><button>AnswerA</button></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"><button>AnswerB</button></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"><button>AnswerC</button></div>
                 <div class="controls">
-                    <button id="next-btn" class="next-btn">next</button>
-
-
+                    <div class="next-btn"><button>Next</button>
+                    </div>
+                    
                 </div>
-                
-            </div>
+                <div class="submit-btn"><button>Submit</button>
+                </div>
 
         </div>
         
     </div>
+    </div>
+
+    <footer>
+        <div class="total-que">
+
+        </div>
+    </footer>
 
     <!-- <div id="start-btn" >
         <h1>START Quiz</h1>
