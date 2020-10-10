@@ -1,12 +1,17 @@
-let timeEl = document.querySelector(".time");
-let startBtn = document.getElementById("start-btn");
-let question = document.getElementById("question");
-let answerBtns = document.getElementById("answer-btn")
-let answerA = document.getElementById("A");
-let answerB = document.getElementById("B");
-let answerC = document.getElementById("C");
-let nextBtn = document.getElementById("next-btn")
-let submitBtn = document.querySelector("submit-btn")
+let timerEl = document.getElementById("timer");
+let startBtn = document.querySelector(".start-btn");
+let questionEl = document.getElementById("question");
+let answerBtns = document.getElementById("answer-btn");
+// let answerA = document.getElementById("A");
+// let answerB = document.getElementById("B");
+// let answerC = document.getElementById("C");
+var answers = 0;
+let nextBtn = document.getElementById("next-btn");
+let submitBtn = document.querySelector("submit-btn");
+var questionNumber = 0;
+var timerCount = 0;
+var scoreCount = 0;
+
 // let progress = document.getElementById("proguess");
 // let scoreContainer = document.getElementById("scoreContainer")
 
@@ -20,24 +25,41 @@ let submitBtn = document.querySelector("submit-btn")
 // document.getElementById("question");
 //    });
 
+// function displayQuestions () {
+//    questionEl.textContent = myQuestions[questionNumber].myQuestions;
+   
+// }
+
+
+
 startBtn.addEventListener("click", setTime);
 
-var secondsLeft = 10;
+var secondsLeft = 5;
 
 
-// this function will tell time,
+
+// this function will tell user how much time they have left 
 function setTime() {
-   var timerInterval = setInterval(function () {
-      console.log(timerInterval)
+   var timerInterval = setInterval(function() {
       secondsLeft--;
-      console.log(secondsLeft)
-      timeEl.textContent = secondsLeft + "seconds left";
+      timerEl.textContent = secondsLeft + "seconds left";
 
       if (secondsLeft === 0) {
          clearInterval(timerInterval);
       }
    }, 1000);
 }
+
+renderQuestion ();
+
+function renderQestion(){
+question.innerHtml = "";
+myQuestions.textContent      
+
+}
+
+
+// / when timer is up include button to save scores----
 
 
 // console.log(timeInterval)
@@ -56,56 +78,60 @@ function setTime() {
 
 // on submit, show results 
 // submitBtn.addEventListener("click", showResults);
+// var currentQuestion = 0;
+// var userChoice = "alert";
 
+// if (userChoice ===question[currentQuestion])
 
-
-
+//array with questions, answer choices, and right answers
 var myQuestions = [
    {
-      question: "What does HTML stand for?",
-      answers: {
-         choiceA: "only works on mac",
-         choiceB: "hyper text markup language",
-         choiceC: "hypo active language",
-      },
-      correctAnswer: "B",
+      question: "Inside of which HTML element do we put the Javascript?",
+      answers: ["<script>","<css>","<scripting>"],
+      correctAnswer: 0
    },
    {
-      question: "What is JavaScript?",
-      choiceA: "easy",
-      choiceB: "hard",
-      choiceC: "programming language",
-      correctAnswer: "C"
+      question: "When was JavaScript created?",
+      answers: ["2020","1898","1995"],
+      correctAnswer: 2
    },
    {
-      question: "What does WWW stand for?",
-      choiceA: "World Wide Web",
-      choiceB: "What went wrong",
-      choiceC: "none of the above",
-      correctAnswer: "A",
+      question: "What does CSS stand for?",
+     answers: ["World Wide Web","Cascading Style Sheets","Cursor style shift"],
+      correctAnswer: 1
 
    }
 ]
 
-console.log(myQuestions)
+// console.log(myQuestions)
+
+displayQuestions()
+
+// function displayQuestions(event){
+//    event.prevent
+// }
+
+
 
 function buildQuiz() { }
 function showResults() { }
 
 // display quiz right away
-function buildQuiz() {
-   var output = [];
 
-   myQuestions.forEach(
-      (currentQuestion, questionNumber) => {
-         var answers = [];
-         for (letter in currentQuestion.answers) {
-            answers.push()
-         }
-      }
-   )
 
-}
+// function buildQuiz() {
+//    var output = [];
+
+//    myQuestions.forEach(
+//       (currentQuestion, questionNumber) => {
+//          var answers = [];
+//          for (lecurrentQuestion.answers) {
+//             answers.push()
+//          }
+//       }
+//    )
+
+// }
 
 
 // <label>
