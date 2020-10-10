@@ -12,18 +12,8 @@ var questionNumber = 0;
 var timerCount = 0;
 var scoreCount = 0;
 
-// let progress = document.getElementById("proguess");
-// let scoreContainer = document.getElementById("scoreContainer")
-
-// startButton.addEventListener("click",setTime);
-// var startBtn = document.createElement("button");
-// startBtn.innerHTML="#start-btn"
 
 
-//    document.getElementById("startBtn").addEventListener("click",
-//    function(){
-// document.getElementById("question");
-//    });
 
 // function displayQuestions () {
 //    questionEl.textContent = myQuestions[questionNumber].myQuestions;
@@ -31,10 +21,14 @@ var scoreCount = 0;
 // }
 
 
+function start (){
+   setTime()
+   displayQuestions()
+};
 
-startBtn.addEventListener("click", setTime);
+startBtn.addEventListener("click",start);
 
-var secondsLeft = 5;
+var secondsLeft = 60;
 
 
 
@@ -49,67 +43,76 @@ function setTime() {
       }
    }, 1000);
 }
-
-renderQuestion ();
-
-function renderQestion(){
-question.innerHtml = "";
-myQuestions.textContent      
-
-}
-
-
-// / when timer is up include button to save scores----
-
-
-// console.log(timeInterval)
-//       let secondsLeft =10;
-//       secondsLeft--;
-//       return;
-//       time.textContent=(secondsLeft + ""+ "time left");
-// function renderQestion(){
-//    for (var i = 0; i < question.length; i++);
-
-
-// }); 
-// renderQuestion(questions[1]) ;
-// for ( var i = 0; i<questions.length; i++);
-// console.log(renderQuestion)
-
-// on submit, show results 
-// submitBtn.addEventListener("click", showResults);
-// var currentQuestion = 0;
-// var userChoice = "alert";
-
-// if (userChoice ===question[currentQuestion])
-
-//array with questions, answer choices, and right answers
 var myQuestions = [
    {
       question: "Inside of which HTML element do we put the Javascript?",
       answers: ["<script>","<css>","<scripting>"],
-      correctAnswer: 0
+      correctAnswer: "<script>"
    },
    {
       question: "When was JavaScript created?",
       answers: ["2020","1898","1995"],
-      correctAnswer: 2
+      correctAnswer: "1995"
    },
    {
       question: "What does CSS stand for?",
      answers: ["World Wide Web","Cascading Style Sheets","Cursor style shift"],
-      correctAnswer: 1
+      correctAnswer: "Cascading Style Sheets"
 
    }
 ]
 
 // console.log(myQuestions)
 
-displayQuestions()
 
-// function displayQuestions(event){
-//    event.prevent
-// }
+
+function displayQuestions(){
+   console.log(myQuestions[questionNumber])
+   var thisQuestion = myQuestions[questionNumber];
+   document.getElementById("question").textContent=thisQuestion.question;
+   document.getElementById("choiceA").textContent=thisQuestion.answers[0];
+   document.getElementById("choiceB").textContent=thisQuestion.answers[1];
+   document.getElementById("choiceC").textContent=thisQuestion.answers[2];
+  
+}
+var buttons = document.querySelectorAll(".answerBtn")
+buttons.forEach(function (thisButton){
+   thisButton.addEventListener("click",checkAnswer);
+
+});
+
+function checkAnswer (){
+   console.log(this.textContent)
+   var results = "";
+   if (this.textContent===myQuestions[questionNumber].correctAnswer){
+      console.log("correct")
+      results ="correct"
+
+   }else {
+      console.log("incorrect")
+      results = "incorrect"
+   }
+document.getElementById("right-answer").textContent= results
+}
+
+function next (){
+   questionNumber++;
+   if (questionNumber>=myQuestions.length){
+      gameover()
+      return;
+   }
+   displayQuestions()
+   document.getElementById("right-answer").textContent= "";
+
+
+};
+
+function gameover(){
+   console.log("gameover")
+};
+
+nextBtn.addEventListener("click",next);
+
 
 
 

@@ -1,45 +1,104 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+} */
 
 .container {
-    border: burlywood;
-    padding: 50%;
-    background-color: chartreuse;
-
+    background-color: white;
+    border: 4px;
+    width: 75%;
+    height: 600px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: absolute;
+    position: center;
 }
 
-.btn {
+/* #timer {
     font-style: bold;
-    background-color: fuchsia;
-    width: 65px auto;
-
-}
-
-#start-btn button {
-    font-style: bold;
-    background-color: aqua;
-    position: relative
-    
+    background-color:#2b89e2;
+    color: white;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    width: auto;
+    text-align: center;
     ;
+    position:center;
+} */
+
+#main-container {
+    font-style: bold;
+    background-color:blue;
+    color: white;
+    padding: auto;
+    margin: auto;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    height:auto;
+    position:auto;
+  
 
 }
+
+
+/* button for start, next, and submit */
+.start-btn {
+    background-color: rgb(255, 0, 191);
+    color: white; 
+    padding: 5px;
+    margin: 30px;
+    border-radius: 10px;
+    width: 75px;
+
+}
+/* answer choice buttons */
+.choice-btn{
+background-color: lightblue;
+color: black;
+padding: 5px;
+margin: 10px;
+width: 50px;
+}
+
+
+#question-container {
+    text-align: left;
+}
+
+/* answer options // */
+#answer-buttons {
+    font-style: bold;
+    background-color:violet;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50px;
+
+}
+
 
 body {
     background-color:beige;
 }
+/* #answer-buttons {
+    background-color: lightblue;
+    color: white;
+    
 
-.container {
+} */
+
+/* .container {
     width: 800px;
     max-width: 80%;
     background-color: blueviolet;
     padding: 50px;
     margin: 50px;
     
-}
+} */
 h2 {
     font-weight: bold;
     font-size: 38px;
@@ -57,3 +116,7 @@ h2 {
     width: 65px auto;
 
 }
+/* 
+#timer {
+    text-decoration:blueviolet;
+} */
