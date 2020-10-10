@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type ="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Code Quiz</title>
-    
+
 </head>
 <header>
     <h1> Code Quiz</h1>
 </header>
 
 <body>
-    
+
     <div class="container">
-
-<div class="time"></div>
-<!-- //start button -->
-        <div id="start-btn"><button>Start Quiz</button> </div>
-        <div id="question-container" >
-            <div id="question">
-                <h2>Question:</h2>
-            </div>
-            <div id="answer-buttons" >
-                <div class="choice" id="A" onclick="checkAnswer('A')"><button>AnswerA</button></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"><button>AnswerB</button></div>
-                <div class="choice" id="C" onclick="checkAnswer('C')"><button>AnswerC</button></div>
-                <div class="controls">
-                    <div class="next-btn"><button>Next</button>
-                    </div>
-                    
-                </div>
-                <div class="submit-btn"><button>Submit</button>
-                </div>
-
+        <!-- //start button -->
+        <div id="main-container">
+            <div id="timer"></div>
+            <h2>Quiz</h2>
+            
+            <p>Question:<text id="start-question"></text></p>
+            <p>Score:<text id="score-question"></text></p>
+            <div id="start-message">Click start to begin</div>
+            <div><button class="start-btn">start</button></div>
+            <hr />
+            <div id="question-container">
+                <div id="question"></div>
+                <button id="choiceA" onclick="checkAnswer('A')"><button>
+                <button id="choiceB" onclick="checkAnswer('B')"><button>
+                <button id="choiceC" onclick="checkAnswer('C')"><button>
+                <div id="right-answer"></div>
+             <!-- <div id="main-container">
+           
+        </div> -->
         </div>
-        
-    </div>
     </div>
 
-    <footer>
-        <div class="total-que">
-
-        </div>
-    </footer>
-
-    <!-- <div id="start-btn" >
-        <h1>START Quiz</h1>
-        <div class="timer">TIMER HERE</div> 
     </div>
-   <div id="question">
-    <p>What does HTML stand for?</p>
-   </div>
-   <div id="choices">
-    <div class="choice" id="A"></div>
-    <div class="choice" id="B"></div>
-    <div class="choice" id="C"></div>
-   </div>
-   <div id="progress">will tell user right or wrong</div>
-   
-<div id="scoreContainer"></div> -->
 
-    
-<script src="assets/js/logic.js"></script>
+
+
+
+
+
+
+
+
+
+
+        <script src="assets/js/logic.js"></script>
 
 </body>
+
 </html>
